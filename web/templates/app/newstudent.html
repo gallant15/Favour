@@ -1,0 +1,30 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Register {% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+{% endblock css %}
+{% block main %}
+<h2>Create A Record</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Name:</label>
+        <input name="first">
+        <br>
+        <label>Registration Number:</label>
+        <input name="second" required>
+        <br>
+        <label>Date of Birth</label>
+        <input type="date" name="third">
+        <br>
+        <label>CGPA</label>
+        <input type="number" name="forth">
+        <br>
+        <button type="submit">Register</button>
+    </form>
+
+{% endblock %}

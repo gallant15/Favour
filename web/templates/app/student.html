@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>List of Students</h3>
+    <ol>
+        {% for person in data %}
+        <li>{{person.name}} is {{person.age}} years old</li>
+        {% endfor %}
+    </ol>
+    <a href="{% url 'akoko' %}">School Portal</a>
+</body>
+</html>

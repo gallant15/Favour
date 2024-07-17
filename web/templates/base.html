@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    {% block css %} {% endblock %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li><a href="{% url 'back' %}">Register</a></li>
+        </ul>
+    </nav>
+
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+    
+    <main>{% block main %}  {% endblock %}</main>
+ 
+
+
+    <footer>This is the footer</footer>
+</body>
+</html>
